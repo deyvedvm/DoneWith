@@ -9,27 +9,25 @@
  */
 
 import React from 'react';
-import {Button, Image, SafeAreaView, StyleSheet, Text, TouchableWithoutFeedback} from 'react-native';
+import {Dimensions, SafeAreaView, StyleSheet, View} from 'react-native';
+import {useDeviceOrientation, useDimensions} from '@react-native-community/hooks';
 
 declare const global: {HermesInternal: null | {}};
 
 const App = () => {
-  const handlePress = () => {
-    console.log('Image tapped');
-  };
+  console.log(Dimensions.get('screen'));
+
+  console.log(useDimensions());
+
+  const {landscape} = useDeviceOrientation();
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Hello React Native!</Text>
-      <TouchableWithoutFeedback onPress={handlePress}>
-        <Image
-          source={{
-            uri: 'https://picsum.photos/200/300',
-            width: 200,
-            height: 300,
-          }}/>
-      </TouchableWithoutFeedback>
-      <Button title="Click me" onPress={() => console.log('Button clicked!')}/>
+      <View style={{
+        backgroundColor: 'dodgerblue',
+        width: '100%',
+        height: landscape ? '100%' : '30%',
+      }}/>
     </SafeAreaView>
   );
 };
