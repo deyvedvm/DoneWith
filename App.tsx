@@ -15,20 +15,43 @@ import {useDeviceOrientation, useDimensions} from '@react-native-community/hooks
 declare const global: {HermesInternal: null | {}};
 
 const App = () => {
-  console.log(Dimensions.get('screen'));
+  // console.log(Dimensions.get('screen'));
 
-  console.log(useDimensions());
+  // console.log(useDimensions());
 
   const {landscape} = useDeviceOrientation();
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={{
+      backgroundColor: '#fff',
+      flex: 1,
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+
       <View style={{
         backgroundColor: 'dodgerblue',
-        width: '100%',
-        height: landscape ? '100%' : '30%',
+        width: 100,
+        height: 100,
       }}/>
-    </SafeAreaView>
+
+      <View style={{
+        backgroundColor: 'gold',
+        // top: 20,
+        // left: 20,
+        width: 100,
+        height: 100,
+        // position: 'absolute',
+      }}/>
+
+      <View style={{
+        backgroundColor: 'tomato',
+        width: 100,
+        height: 100,
+      }}/>
+
+    </View>
   );
 };
 
