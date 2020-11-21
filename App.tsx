@@ -9,59 +9,10 @@
  */
 
 import React from 'react';
-import {Dimensions, SafeAreaView, StyleSheet, View} from 'react-native';
-import {useDeviceOrientation, useDimensions} from '@react-native-community/hooks';
-
-declare const global: {HermesInternal: null | {}};
+import WelcomeScreen from './src/screens/WelcomeScreen';
 
 const App = () => {
-  // console.log(Dimensions.get('screen'));
-
-  // console.log(useDimensions());
-
-  const {landscape} = useDeviceOrientation();
-
-  return (
-    <View style={{
-      backgroundColor: '#fff',
-      flex: 1,
-      flexDirection: 'row',
-      justifyContent: 'center',
-      alignItems: 'center',
-    }}>
-
-      <View style={{
-        backgroundColor: 'dodgerblue',
-        width: 100,
-        height: 100,
-      }}/>
-
-      <View style={{
-        backgroundColor: 'gold',
-        // top: 20,
-        // left: 20,
-        width: 100,
-        height: 100,
-        // position: 'absolute',
-      }}/>
-
-      <View style={{
-        backgroundColor: 'tomato',
-        width: 100,
-        height: 100,
-      }}/>
-
-    </View>
-  );
+  return <WelcomeScreen/>;
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 export default App;
