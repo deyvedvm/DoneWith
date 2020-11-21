@@ -10,9 +10,10 @@
 
 import React from 'react';
 import WelcomeScreen from './src/screens/WelcomeScreen';
+import ViewImageScreen from './src/screens/ViewImageScreen';
 
 const App = () => {
-  return <WelcomeScreen/>;
+  return <ViewImageScreen/>;
 };
 
 export default App;
