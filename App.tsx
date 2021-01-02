@@ -9,7 +9,9 @@
  */
 
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
+
+import AppText from './src/components/AppText';
 
 const App = () => {
   return (<View style={{
@@ -18,17 +20,9 @@ const App = () => {
     alignItems: 'center',
   }}>
 
-    <Text style={{
-      fontSize: 30,
-      fontFamily: 'Roboto',
-      fontStyle: 'italic',
-      fontWeight: '600',
-      color: 'tomato',
-      textTransform: 'capitalize',
-      textAlign: 'center',
-    }}>
-      react native!
-    </Text>
+    <AppText>
+      React Native!
+    </AppText>
 
   </View>);
 };
