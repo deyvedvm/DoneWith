@@ -9,7 +9,7 @@
  */
 
 import React from 'react';
-import {View} from 'react-native';
+import {Text, View} from 'react-native';
 
 const App = () => {
   return (<View style={{
@@ -18,31 +18,17 @@ const App = () => {
     alignItems: 'center',
   }}>
 
-    <View style={{
-      backgroundColor: 'dodgerblue',
-      width: 100,
-      height: 100,
-      padding: 20,
+    <Text style={{
+      fontSize: 30,
+      fontFamily: 'Roboto',
+      fontStyle: 'italic',
+      fontWeight: '600',
+      color: 'tomato',
+      textTransform: 'capitalize',
+      textAlign: 'center',
     }}>
-
-      <View style={{
-        backgroundColor: 'gold',
-        width: 50,
-        height: 50,
-      }}>
-
-      </View>
-
-    </View>
-
-    <View style={{
-      backgroundColor: 'tomato',
-      width: 100,
-      height: 100,
-      margin: 20,
-    }}>
-
-    </View>
+      react native!
+    </Text>
 
   </View>);
 };
