@@ -9,25 +9,10 @@
  */
 
 import React from 'react';
-import {View} from 'react-native';
-
-import Card from './src/components/Card';
+import ListDetailsScreen from './src/screens/ListDetailsScreen';
 
 const App = () => {
-  return <View style={
-    {
-      backgroundColor: '#f8f4f4',
-      padding: 20,
-      paddingTop: 100,
-    }}>
-
-    <Card
-      title="Detroit Lions Jacket for sale!"
-      subTitle="$100"
-      image={require('./src/assets/beverly-hill-cop-detroit-lions-axel-foley-Jacket-1000x1000.jpg')}
-    />
-
-  </View>;
+  return <ListDetailsScreen/>;
 };
 
 export default App;
