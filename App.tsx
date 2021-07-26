@@ -9,11 +9,10 @@
  */
 
 import React from 'react';
-
-import ViewImageScreen from './src/screens/ViewImageScreen';
+import MessagesScreen from './src/screens/MessagesScreen';
 
 const App = () => {
-  return <ViewImageScreen/>;
+  return <MessagesScreen/>;
 };
 
 export default App;
